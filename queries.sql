@@ -11,9 +11,7 @@ select name from employer where location = "St. Louis City";
 drop table job;
 
 --Part 4
-
---select name from skill s inner join job_skills js on s.id = js.skills_id group by s.id order by name asc;
-select name from skill s
-inner join job_skills js on s.id = js.skills_id
-group by s.id
-order by name asc;
+SELECT * FROM skill
+INNER JOIN job_skills ON job_skills.skills_id = skill.id
+WHERE job_skills.jobs_id IS NOT NULL
+ORDER BY name ASC;
