@@ -30,7 +30,7 @@ public class Job {
     }
 
     // Getters and setters.
-    
+
     public String getName() {
         return name;
     }
